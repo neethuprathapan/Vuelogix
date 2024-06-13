@@ -9,7 +9,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
-import org.testng.Assert;
+
 import org.testng.annotations.Test;
 
 import basepackage.baseclass;
@@ -18,7 +18,7 @@ import excelutilities.excelutils;
 
 public class testclass extends baseclass
 {
-	@Test(priority = 1, enabled=false)
+	@Test(priority = 1)
 	public void titleverification()
 	{
 	String exp="Account";
@@ -36,7 +36,7 @@ public class testclass extends baseclass
 	}
 	
 	
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2)
 	public void logoverification()
 	{
 		WebElement we=driver.findElement(By.xpath("//*[@id=\"SiteHeader\"]/div[1]/div/div[1]/div/a[1]/img[1]"));
@@ -52,7 +52,7 @@ public class testclass extends baseclass
 	}
 	
 	
-	@Test(priority = 3, enabled= false)
+	@Test(priority = 3)
 	public void linkcount()
 	{
 		List<WebElement> li=driver.findElements(By.tagName("a"));
@@ -67,7 +67,7 @@ public class testclass extends baseclass
 		}		
 	}
 	
-	@Test(priority = 4, enabled=false)
+	@Test(priority = 4)
 	public void buttontext()
 	{
 	WebElement button=driver.findElement(By.xpath("//*[@id=\"customer_login\"]/p[1]/button"));
@@ -76,7 +76,7 @@ public class testclass extends baseclass
 
 	}
 	
-	@Test(priority = 5, enabled = false)
+	@Test(priority = 5)
 	public void screenshot() throws IOException
 	{
 		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -88,19 +88,7 @@ public class testclass extends baseclass
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	@Test(priority = 5, enabled= true)
+	@Test(priority = 6)
 	public void datadriven() throws Exception
 	{
 		pageclass ob = new pageclass(driver);
